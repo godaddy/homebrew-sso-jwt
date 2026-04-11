@@ -1,8 +1,9 @@
 class SsoJwt < Formula
   desc "SSO JWT CLI with hardware-backed secure caching (Secure Enclave / TPM)"
   homepage "https://github.com/gdcorp-im/sso-jwt"
-  url "https://github.com/gdcorp-im/sso-jwt/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  url "https://github.com/gdcorp-im/sso-jwt/releases/download/v0.1.0/sso-jwt-0.1.0.tar.gz",
+      using: CurlDownloadStrategy
+  sha256 "fbde5482a7efeee1aca7c855cc1d5871a5fb57ab181cc828a4e538ac0a7e9ac9"
   license "MIT"
   head "https://github.com/gdcorp-im/sso-jwt.git", branch: "main"
 
