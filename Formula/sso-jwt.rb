@@ -1,17 +1,17 @@
 class SsoJwt < Formula
   desc "SSO JWT CLI with hardware-backed secure caching (Secure Enclave / TPM)"
   homepage "https://github.com/jgowdy/sso-jwt"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/jgowdy/sso-jwt/releases/download/v0.3.0/sso-jwt-aarch64-apple-darwin.tar.gz"
-      sha256 "918938590ae6f82c28c7c1b9d20a03d644d13522fc750d5a3dc8b1b8037871e3"
+      url "https://github.com/jgowdy/sso-jwt/releases/download/v0.3.1/sso-jwt-aarch64-apple-darwin.tar.gz"
+      sha256 "253cc7b5ab73ce82194c61082afd209601af0b71f8c6d6189ee7e430bfbbf847"
     end
     on_intel do
-      url "https://github.com/jgowdy/sso-jwt/releases/download/v0.3.0/sso-jwt-x86_64-apple-darwin.tar.gz"
-      sha256 "f39fea3b148939b4c4d09895a4a9a66904755467aad5d44456258896fac6690b"
+      url "https://github.com/jgowdy/sso-jwt/releases/download/v0.3.1/sso-jwt-x86_64-apple-darwin.tar.gz"
+      sha256 "362d607fbbdb23d3ff33f31ab45142ffebeb071004772ee56ffa3e360f294cb9"
     end
   end
 
