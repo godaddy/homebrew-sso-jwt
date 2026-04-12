@@ -1,17 +1,34 @@
 class SsoJwt < Formula
   desc "SSO JWT CLI with hardware-backed secure caching (Secure Enclave / TPM)"
-  homepage "https://github.com/gdcorp-im/sso-jwt"
-  url "https://github.com/gdcorp-im/sso-jwt.git",
-      tag: "v0.1.0",
-      revision: "8b79f95446b9b7d69159c7a0a5cf382b3a049957"
+  homepage "https://github.com/jgowdy/sso-jwt"
+  version "0.1.1"
   license "MIT"
-  head "https://github.com/gdcorp-im/sso-jwt.git", branch: "main"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/jgowdy/sso-jwt/releases/download/v0.1.1/sso-jwt-aarch64-apple-darwin.tar.gz"
+      sha256 "166567ea6d1d287d971c4e71ce205a16e357baff642d9f04f8f0422ccf665402"
+    end
+    on_intel do
+      url "https://github.com/jgowdy/sso-jwt/releases/download/v0.1.1/sso-jwt-x86_64-apple-darwin.tar.gz"
+      sha256 "c3fdcd15c97039257e471cda8ac71ce4feac0affd31a2b9b08299a96ae0d4ec0"
+    end
+  end
 
   def install
-    system "cargo", "build", "--release", "--manifest-path", "sso-jwt/Cargo.toml"
-    bin.install "target/release/sso-jwt"
+    bin.install "sso-jwt"
+  end
+
+  def caveats
+    <<~EOS
+      Add shell integration to your profile:
+
+        echo 'eval "$(sso-jwt shell-init)"' >> ~/.zshrc
+
+      Usage:
+
+        COMPANY_JWT=$(sso-jwt) terraform apply
+    EOS
   end
 
   test do
