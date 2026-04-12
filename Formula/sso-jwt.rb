@@ -27,7 +27,7 @@ class SsoJwt < Formula
 
       Usage:
 
-        COMPANY_JWT=$(sso-jwt) terraform apply
+        SSO_JWT=$(sso-jwt) terraform apply
     EOS
   end
 

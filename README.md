@@ -1,11 +1,11 @@
 # homebrew-sso-jwt
 
-Homebrew tap for [sso-jwt](https://github.com/gdcorp-im/sso-jwt) -- SSO JWT CLI with hardware-backed secure caching.
+Homebrew tap for [sso-jwt](https://github.com/jgowdy/sso-jwt) -- SSO JWT CLI with hardware-backed secure caching.
 
 ## Install
 
 ```bash
-brew tap gdcorp-im/sso-jwt
+brew tap jgowdy/sso-jwt
 brew install sso-jwt
 ```
 
@@ -19,5 +19,5 @@ brew upgrade sso-jwt
 
 ```bash
 brew uninstall sso-jwt
-brew untap gdcorp-im/sso-jwt
+brew untap jgowdy/sso-jwt
 ```
