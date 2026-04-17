@@ -1,17 +1,17 @@
 class SsoJwt < Formula
   desc "SSO JWT CLI with hardware-backed secure caching"
   homepage "https://github.com/godaddy/sso-jwt"
-  version "0.5.15"
+  version "0.5.16"
   license "MIT"
 
   on_arm do
-    url "https://github.com/godaddy/sso-jwt/releases/download/v0.5.15/sso-jwt-aarch64-apple-darwin.tar.gz"
-    sha256 "0cd257ed566058ee95cfbbcd3258838a9f8011d98dc0ec10ee7ae4fe51c651d4"
+    url "https://github.com/godaddy/sso-jwt/releases/download/v0.5.16/sso-jwt-aarch64-apple-darwin.tar.gz"
+    sha256 "d83b67deda4dcb7ca49f793b9cc3b7eb6cf7bf3f319f4ca687af33d8b19c6908"
   end
 
   on_intel do
-    url "https://github.com/godaddy/sso-jwt/releases/download/v0.5.15/sso-jwt-x86_64-apple-darwin.tar.gz"
-    sha256 "7eea10caeb81395885cc01bdf1eb4461eac38c5c87861d234aa6dd1a5abebe14"
+    url "https://github.com/godaddy/sso-jwt/releases/download/v0.5.16/sso-jwt-x86_64-apple-darwin.tar.gz"
+    sha256 "1fae8af507830896901b61a9dd32b0dd5d32168e5cbe5d55d8e8ad0ed8fe65cd"
   end
 
   depends_on :macos
